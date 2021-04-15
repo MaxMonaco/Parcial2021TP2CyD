@@ -14,7 +14,38 @@
     pants: 5,
   }
 
+
 const sale = function (article, cant){
+  let salida = 500
+  switch (article){
+    case 'shoes':
+      if (cant<=inventory.shoes){
+        salida = 200;
+        inventory.shoes -= cant;
+      }
+      break;
+    case 'socks':
+      if (cant<=inventory.socks){
+        salida = 200;
+       inventory.socks -=cant;
+      }
+      break;
+    case 'shirts':
+      if (cant<=inventory.shirts){
+        salida = 200;
+        inventory.shirts -= cant;
+      }
+      break;
+    case 'pants':
+      if (cant<=inventory.pants){
+        salida = 200;
+        inventory.pants -= cant;
+      }
+      break;
+      
+  }
+  return salida;
+;
   
 }
 
